@@ -1,0 +1,137 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.bluescript.bank.demo:TESTJF10 >------------------
+[INFO] Building TESTJF10 Microservice 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ TESTJF10 ---
+[INFO] Deleting D:\BLUESCRIPT_DEMO\End-2-EndTestData\Prem Demo\TESTJF10_SBT\target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (jacoco-initialize) @ TESTJF10 ---
+[INFO] argLine set to "-javaagent:C:\\Users\\jarvi\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.7\\org.jacoco.agent-0.8.7-runtime.jar=destfile=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Prem Demo\\TESTJF10_SBT\\target\\jacoco.exec"
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.14.0:format (default) @ TESTJF10 ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 24
+[INFO] Successfully formatted:          24 file(s)
+[INFO] Fail to format:                  0 file(s)
+[INFO] Skipped:                         0 file(s)
+[INFO] Read only skipped:               0 file(s)
+[INFO] Approximate time taken:          0s
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ TESTJF10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ TESTJF10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 24 source files to D:\BLUESCRIPT_DEMO\End-2-EndTestData\Prem Demo\TESTJF10_SBT\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[131,33] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[131,46] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[185,27] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[185,40] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[203,34] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[203,47] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[203,60] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[203,73] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[228,34] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[228,47] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[238,33] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[238,46] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,31] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,44] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,56] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,69] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,81] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,94] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,108] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,121] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,135] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,148] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,166] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,179] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,192] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,205] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[266,30] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[266,43] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[291,33] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[291,46] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,35] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,48] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,60] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,73] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,87] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,100] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,118] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,131] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,143] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,156] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,169] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,182] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[350,32] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[350,45] illegal start of expression
+[INFO] 44 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.577 s
+[INFO] Finished at: 2023-06-14T12:11:00-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project TESTJF10: Compilation failure: Compilation failure: 
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[131,33] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[131,46] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[185,27] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[185,40] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[203,34] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[203,47] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[203,60] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[203,73] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[228,34] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[228,47] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[238,33] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[238,46] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,31] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,44] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,56] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,69] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,81] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,94] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,108] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,121] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,135] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,148] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,166] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,179] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,192] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[248,205] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[266,30] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[266,43] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[291,33] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[291,46] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,35] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,48] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,60] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,73] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,87] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,100] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,118] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,131] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,143] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,156] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,169] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[316,182] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[350,32] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[350,45] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

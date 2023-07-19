@@ -1,0 +1,129 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.bluescript.bank.demo:TESTJF10 >------------------
+[INFO] Building TESTJF10 Microservice 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ TESTJF10 ---
+[INFO] Deleting D:\BLUESCRIPT_DEMO\End-2-EndTestData\Prem Demo\TESTJF10_SBT_Compiled\target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (jacoco-initialize) @ TESTJF10 ---
+[INFO] argLine set to "-javaagent:C:\\Users\\jarvi\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.7\\org.jacoco.agent-0.8.7-runtime.jar=destfile=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Prem Demo\\TESTJF10_SBT_Compiled\\target\\jacoco.exec"
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.14.0:format (default) @ TESTJF10 ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 24
+[INFO] Successfully formatted:          1 file(s)
+[INFO] Fail to format:                  0 file(s)
+[INFO] Skipped:                         23 file(s)
+[INFO] Read only skipped:               0 file(s)
+[INFO] Approximate time taken:          0s
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ TESTJF10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ TESTJF10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 24 source files to D:\BLUESCRIPT_DEMO\End-2-EndTestData\Prem Demo\TESTJF10_SBT_Compiled\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[122,24] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[123,18] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[140,22] variable v02DatetimeList is already defined in method initialization(com.bluescript.bank.demo.model.V02Datetime)
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[198,25] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[198,48] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[218,57] cannot find symbol
+  symbol:   method getV02Datetime()
+  location: variable item of type com.bluescript.bank.demo.dto.IC1ParkanbDto
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[255,21] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[256,24] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[257,26] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[257,48] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[257,72] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[257,100] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[258,17] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[258,40] cannot find symbol
+  symbol:   variable item
+  location: class com.bluescript.bank.demo.service.Testjf10Service
+[INFO] 14 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.598 s
+[INFO] Finished at: 2023-06-14T12:22:55-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project TESTJF10: Compilation failure: Compilation failure: 
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[122,24] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[123,18] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[140,22] variable v02DatetimeList is already defined in method initialization(com.bluescript.bank.demo.model.V02Datetime)
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[198,25] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[198,48] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[218,57] cannot find symbol
+[ERROR]   symbol:   method getV02Datetime()
+[ERROR]   location: variable item of type com.bluescript.bank.demo.dto.IC1ParkanbDto
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[255,21] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[256,24] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[257,26] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[257,48] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[257,72] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[257,100] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[258,17] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/Prem Demo/TESTJF10_SBT_Compiled/src/main/java/com/bluescript/bank/demo/service/Testjf10Service.java:[258,40] cannot find symbol
+[ERROR]   symbol:   variable item
+[ERROR]   location: class com.bluescript.bank.demo.service.Testjf10Service
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

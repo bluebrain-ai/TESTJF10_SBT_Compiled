@@ -1,0 +1,5 @@
+com\bluescript\bank\demo\service\ITestjf10Service.class
+com\bluescript\bank\demo\controller\Testjf10Controller.class
+com\bluescript\bank\demo\model\WsCcyymmdd.class
+com\bluescript\bank\demo\model\WsDateReformatAreas.class
+com\bluescript\bank\demo\model\WsWorkDate.class

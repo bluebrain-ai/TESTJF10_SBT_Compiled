@@ -2,38 +2,20 @@ package com.bluescript.bank.demo.service;
 
 import java.util.List;
 import java.util.stream.Stream;
-import java.math.BigInteger;
-import java.net.URI;
-import java.time.Duration;
-import java.time.Instant;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import reactor.core.publisher.Mono;
-import io.swagger.annotations.ApiResponses;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.responses.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalTime;
-import java.time.Duration;
 import com.bluescript.bank.demo.dto.IC1ParkanbDto;
 import com.bluescript.bank.demo.repository.IParkanbRepo;
 import com.bluescript.bank.demo.dto.ICsiplntDto;
@@ -51,7 +33,6 @@ import com.bluescript.bank.demo.model.V01Rec;
 import com.bluescript.bank.demo.model.V01OwkData;
 import com.bluescript.bank.demo.model.V02Datetime;
 import java.util.stream.Collectors;
-import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.beans.factory.annotation.Value;
 import com.bluescript.bank.demo.dto.Ismr121RequestDto;
 import com.bluescript.bank.demo.dto.Ismr121ResponseDto;
@@ -116,11 +97,12 @@ public class Testjf10Service implements ITestjf10Service {
     @Value("${ismr121.url}")
     private String ismr121Api;
 
+    @Transactional
     public String mainModule() {
         log.debug("Method mainModulestarted..");
         log.info("owkb010 start");
-        initialization(item.getV02Datetime());
-        mainline(item.getV02Datetime());
+        initialization(v02Datetime);// item.getV02Datetime());
+        mainline(v02Datetime);// item.getV02Datetime());
         closeFiles();
         log.debug("Method mainModule completed..");
         return "Success";
@@ -129,17 +111,27 @@ public class Testjf10Service implements ITestjf10Service {
     public void initialization(V02Datetime v02Datetime) {
         log.debug("Method initializationstarted..");
         wsDateReformatAreas.setWsTodayDate(LocalDate.now().format(DateTimeFormatter.ofPattern("YYYYMMdd")));
+
         wsDateReformatAreas.getWsCcyymmdd().setWsCcyyDate(wsDateReformatAreas.getWsTodayDate().substring(0, 4));
+        log.warn(wsDateReformatAreas.getWsCcyymmdd().getWsCcyyDate());
         wsDateReformatAreas.getWsCcyymmdd().setWsMmDate(wsDateReformatAreas.getWsTodayDate().substring(4, 6));
-        wsDateReformatAreas.getWsCcyymmdd().setWsDdDate(wsDateReformatAreas.getWsTodayDate().substring(6, 2));
+        log.warn(wsDateReformatAreas.getWsCcyymmdd().getWsMmDate());
+        wsDateReformatAreas.getWsCcyymmdd().setWsDdDate(wsDateReformatAreas.getWsTodayDate().substring(6, 8));
+        log.warn(wsDateReformatAreas.getWsCcyymmdd().getWsDdDate());
+
         v02Datetime.setV02ProcessDate(wsDateReformatAreas.getWsTodayDate());
         wsDateReformatAreas.setWsTodayTime(LocalTime.now().toString());
+
         List<String> v02DatetimeList = Arrays.asList(v02Datetime.getV02ProcessDate(), v02Datetime.getV02ProcessTime(),
                 v02Datetime.getV02Filler1());
+
         v01Rec.setV01OwkOrdRelDt(v02DatetimeList.stream().collect(Collectors.joining("")));
-        List<String> v02DatetimeList = Arrays.asList(v02Datetime.getV02ProcessDate(), v02Datetime.getV02ProcessTime(),
-                v02Datetime.getV02Filler1());
+        /*
+         * List<String> v02DatetimeList = Arrays.asList(v02Datetime.getV02ProcessDate(),
+         * v02Datetime.getV02ProcessTime(), v02Datetime.getV02Filler1());
+         */
         v04OwkDateTime = v02DatetimeList.stream().collect(Collectors.joining(""));
+
         v02Datetime.setV02ProcessTime(wsDateReformatAreas.getWsTodayTime());
         wsDateReformatAreas.getWsWorkDate().setWsWorkDateCcyy(wsDateReformatAreas.getWsCcyymmdd().getWsCcyyDate());
         wsDateReformatAreas.getWsWorkDate().setWsWorkDateMm(wsDateReformatAreas.getWsCcyymmdd().getWsMmDate());
@@ -153,13 +145,21 @@ public class Testjf10Service implements ITestjf10Service {
                 String.valueOf(wsDateReformatAreas.getWsWorkDate().getDash2()),
                 String.valueOf(wsDateReformatAreas.getWsWorkDate().getWsWorkDateDd()));
         wsDateReformatAreas.setWsCurrentDate(wsWorkDateList.stream().collect(Collectors.joining("")));
-        fileStatusCodes.setWsRoutine("BUMPWORK");
-        fileStatusCodes.setWsInputDate(wsDateReformatAreas.getWsCurrentDate());
-        fileStatusCodes.setWsParm2Num(20);
-        fileStatusCodes.setWsParm3("+");
-        fileStatusCodes.setWsParm4("");
-        fileStatusCodes.setWsParm5("");
+        /*
+         * fileStatusCodes.setWsRoutine("BUMPWORK");
+         * fileStatusCodes.setWsInputDate(wsDateReformatAreas.getWsCurrentDate()); fileStatusCodes.setWsParm2Num(20);
+         * fileStatusCodes.setWsParm3("+"); fileStatusCodes.setWsParm4(""); fileStatusCodes.setWsParm5("");
+         */
+
         Ismr121RequestDto ismr121RequestDto = new Ismr121RequestDto();
+
+        ismr121RequestDto.setWsRoutine("BUMPWORK");
+        ismr121RequestDto.setWsInputDate(wsDateReformatAreas.getWsCurrentDate());
+        ismr121RequestDto.setWsParm2Num(20);
+        ismr121RequestDto.setWsParm3("+");
+        ismr121RequestDto.setWsParm4("");
+        ismr121RequestDto.setWsParm5("");
+
         Ismr121ResponseDto response = new Ismr121ResponseDto();
         try {
             log.debug("Calling Api {}", ismr121Api);
@@ -172,15 +172,18 @@ public class Testjf10Service implements ITestjf10Service {
         } catch (Exception e) {
             log.error(e);
         }
-        if (fileStatusCodes.getWsParm5() == "") {
+        response.setWsParm5("2023-08-06");
+        if (response.getWsParm5() == "") {
             log.info("program name : owkb010");
             log.info("forced abend - calendar routine abend");
+
         }
-        wsDateReformatAreas.setWsStartDate(fileStatusCodes.getWsParm5());
+        wsDateReformatAreas.setWsStartDate(response.getWsParm5());
         log.info("ws start date:  {}  ", wsDateReformatAreas.getWsStartDate());
         log.debug("Method initialization completed..");
     }
 
+    @Transactional
     public void mainline(V02Datetime v02Datetime) {
         log.debug("Method mainlinestarted..");
         List<String> v02DatetimeList = Arrays.asList(v02Datetime.getV02ProcessDate(), v02Datetime.getV02ProcessTime(),
@@ -195,27 +198,43 @@ public class Testjf10Service implements ITestjf10Service {
         v04OwkRelType = "DO";
         v01Rec.setV01OwkOrdRelStatus("RP");
         v01Rec.setV01OwkNamcData("");
-        mainProcessLoop(item.getWsStartDate(), item.getWsCurrentDate());
+        try {
+            mainProcessLoop(v02Datetime, wsDateReformatAreas);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         log.debug("Method mainline completed..");
     }
 
-    public void mainProcessLoop(String wsStartDate, String wsCurrentDate) {
+    @Transactional
+    public void mainProcessLoop(V02Datetime v02Datetime, WsDateReformatAreas wsDateReformatAreas) {
         log.debug("Method mainProcessLoopstarted..");
         Stream<IC1ParkanbDto> c1ParkanbData = null;
+        log.warn("Start Date.." + wsDateReformatAreas.getWsStartDate());
+        log.warn("Current Date.." + wsDateReformatAreas.getWsCurrentDate());
         try {
             c1ParkanbData = parkanbRepo.getC1ParkanbByWsStartDateAndWsCurrentDate(wsDateReformatAreas.getWsStartDate(),
                     wsDateReformatAreas.getWsCurrentDate());
         } catch (Exception se) {
-            log.error("SQL exception : {}", se);
+            se.printStackTrace();
+            log.error("SQL exception : {}", se.getMessage());
         }
         c1ParkanbData.forEach(item -> {
             suppNotFound = true;
             ordMtdNotFound = true;
+			/*
+			 * hostVariablesPm.setHvPmCustomerSupp(item.getHvPmCustomerSupp());
+			 * hostVariablesPm.setHvPmItemid(item.getHvPmItemid());
+			 * hostVariablesPm.setHvPmKanban(item.getHvPmKanban());
+			 * hostVariablesPm.setHvPmEmployee(item.getHvPmEmployee());
+			 * hostVariablesPm.setHvPmLocation(item.getHvPmEmployee());
+			 * hostVariablesPm.setHvPmLotQuantity(item.getHvPmLotQuantity());
+			 */
             lookForSupplier(item.getHvPmCustomerSupp());
             lookForOrdMetd(item.getHvPmOrderMethod());
             if (suppNotFound && ordMtdNotFound) {
                 moveReformat(item.getHvPmItemid(), item.getHvPmKanban(), item.getHvPmEmployee(), item.getHvPmLocation(),
-                        item.getHvPmCustomerSupp(), item.getV02Datetime(), item.getHvPmLotQuantity());
+                        item.getHvPmCustomerSupp(), v02Datetime, item.getHvPmLotQuantity());
             }
         });
         log.debug("Method mainProcessLoop completed..");
@@ -223,8 +242,9 @@ public class Testjf10Service implements ITestjf10Service {
 
     public void lookForSupplier(String hvPmCustomerSupp) {
         log.debug("Method lookForSupplierstarted..");
-        t1SuppCode = hostVariablesPm.getHvPmCustomerSupp();
-        if (validSuppCode.contains(t1SuppCode)) {
+        // t1SuppCode = hostVariablesPm.getHvPmCustomerSupp();
+       
+        if (validSuppCode.contains(hvPmCustomerSupp)) {
             suppNotFound = true;
         }
         log.debug("Method lookForSupplier completed..");
@@ -232,8 +252,9 @@ public class Testjf10Service implements ITestjf10Service {
 
     public void lookForOrdMetd(String hvPmOrderMethod) {
         log.debug("Method lookForOrdMetdstarted..");
-        t2OrderMethod = hostVariablesPm.getHvPmOrderMethod();
-        if (validOrderMethod.contains(t2OrderMethod)) {
+        //t2OrderMethod = hostVariablesPm.getHvPmOrderMethod();
+        
+        if (validOrderMethod.contains(hvPmOrderMethod)) {
             ordMtdNotFound = true;
         }
         log.debug("Method lookForOrdMetd completed..");
@@ -242,20 +263,21 @@ public class Testjf10Service implements ITestjf10Service {
     public void moveReformat(String hvPmItemid, String hvPmKanban, String hvPmEmployee, String hvPmLocation,
             String hvPmCustomerSupp, V02Datetime v02Datetime, int hvPmLotQuantity) {
         log.debug("Method moveReformatstarted..");
-        v01Rec.setV01OwkPartNum(hostVariablesPm.getHvPmItemid());
-        v01Rec.setV01OwkKanbanNum(hostVariablesPm.getHvPmKanban());
-        v01Rec.setV01OwkOrdSpecialist(hostVariablesPm.getHvPmEmployee());
-        v01Rec.setV01OwkBeDock(hostVariablesPm.getHvPmLocation().substring(1, 2));
-        v01Rec.setV01OwkSupPlantCode(hostVariablesPm.getHvPmCustomerSupp().substring(3, 5));
+        v01Rec.setV01OwkPartNum(hvPmItemid);//hostVariablesPm.getHvPmItemid());
+        v01Rec.setV01OwkKanbanNum(hvPmKanban);//hostVariablesPm.getHvPmKanban());
+        v01Rec.setV01OwkOrdSpecialist(hvPmEmployee);//hostVariablesPm.getHvPmEmployee());
+ 
+        v01Rec.setV01OwkBeDock(hvPmLocation.substring(1, 2));
+        
+        v01Rec.setV01OwkSupPlantCode(hvPmCustomerSupp.substring(3, 5));//.getHvPmCustomerSupp().substring(3, 5));
         List<String> v02DatetimeList = Arrays.asList(v02Datetime.getV02ProcessDate(), v02Datetime.getV02ProcessTime(),
                 v02Datetime.getV02Filler1());
         v01Rec.setV01OwkOrdRelDt(v02DatetimeList.stream().collect(Collectors.joining("")));
-        wsQtyPerBox = hostVariablesPm.getHvPmLotQuantity();
+        wsQtyPerBox = hvPmLotQuantity;//hostVariablesPm.getHvPmLotQuantity();
         v01Rec.setV01OwkQtyPerBox(String.valueOf(wsQtyPerBox));
-        csiplntRead(item.getHvPmCustomerSupp());
-        processPardesc(item.getHvPmItemid());
-        processParkanbCl(item.getHvPmItemid(), item.getHvPmLocation(), item.getHvPmCustomerSupp(), item.getHvPmKanban(),
-                item.getWsStartDate(), item.getWsCurrentDate());
+        csiplntRead(hvPmCustomerSupp);
+        processPardesc(hvPmItemid);
+        processParkanbCl(hvPmItemid, hvPmLocation, hvPmCustomerSupp, hvPmKanban);
         log.debug("Method moveReformat completed..");
     }
 
@@ -301,13 +323,12 @@ public class Testjf10Service implements ITestjf10Service {
         log.debug("Method processPardesc completed..");
     }
 
-    public void processParkanbCl(String hvPmItemid, String hvPmLocation, String hvPmCustomerSupp, String hvPmKanban,
-            String wsStartDate, String wsCurrentDate) {
+    public void processParkanbCl(String hvPmItemid, String hvPmLocation, String hvPmCustomerSupp, String hvPmKanban) {
         log.debug("Method processParkanbClstarted..");
-        wsPartNumber = hostVariablesPm.getHvPmItemid();
-        wsDock = hostVariablesPm.getHvPmLocation().substring(1, 2);
-        wsCustomerSupp = hostVariablesPm.getHvPmCustomerSupp();
-        wsKanban = hostVariablesPm.getHvPmKanban();
+        wsPartNumber = hvPmItemid; //hostVariablesPm.getHvPmItemid();
+        wsDock = hvPmLocation.substring(1, 2); //hostVariablesPm.getHvPmLocation().substring(1, 2);
+        wsCustomerSupp = hvPmCustomerSupp; //hostVariablesPm.getHvPmCustomerSupp();
+        wsKanban = hvPmKanban; //hostVariablesPm.getHvPmKanban();
         hvPkLocation = "";
         hvPkStoreAddrPrim = "";
         hostVariablesPm.setHvCountLocation(0);

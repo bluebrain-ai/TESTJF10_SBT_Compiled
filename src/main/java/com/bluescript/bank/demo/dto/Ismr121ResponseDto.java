@@ -1,7 +1,5 @@
 package com.bluescript.bank.demo.dto;
 
-import java.util.ArrayList;
-import java.util.List;
 import lombok.Data;
 
 @Data

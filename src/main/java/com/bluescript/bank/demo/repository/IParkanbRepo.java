@@ -1,14 +1,11 @@
 package com.bluescript.bank.demo.repository;
 
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.DuplicateKeyException;
 import javax.persistence.QueryHint;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.QueryHints;
-import org.springframework.data.jpa.repository.Modifying;
 import java.util.stream.*;
 import com.bluescript.bank.demo.entity.ParkanbEntity;
 import com.bluescript.bank.demo.dto.IC1ParkanbDto;
@@ -21,7 +18,8 @@ public interface IParkanbRepo extends JpaRepository<ParkanbEntity, String> {
                                                                                                              // performance
             @QueryHint(name = org.hibernate.annotations.QueryHints.CACHEABLE, value = "false"),
             @QueryHint(name = org.hibernate.annotations.QueryHints.READ_ONLY, value = "true") })
-    @Query(value = "SELECT CUSTOMER_SUPP as hvPmCustomerSupp,LOCATION as hvPmLocation,EMPLOYEE as hvPmEmployee,KANBAN as hvPmKanban,ITEMID as hvPmItemid,LOT-QUANTITY as hvPmLotQuantity,EFF_START as hvPmEffStart,ORDER_METHOD as hvPmOrderMethod FROM PARKANB WHERE TYPE = 'CD 'AND CSI_TYPE = 'SU ' (EFF_START < =:wsStartDate AND (EFF_STOP > =:wsCurrentDate OR EFF_STOP IS NULL)) ORDER BY CUSTOMER-SUPP , LOCATION , ITEMID , EFF-START", nativeQuery = true)
+    @Query(value = "SELECT CUSTOMER_SUPP as hvPmCustomerSupp,LOCATION as hvPmLocation,EMPLOYEE as hvPmEmployee,KANBAN as hvPmKanban,ITEMID as hvPmItemid,LOT_QUANTITY as hvPmLotQuantity,EFF_START as hvPmEffStart,ORDER_METHOD as hvPmOrderMethod FROM PARKANB WHERE TYPE = 'CD' AND CSI_TYPE = 'SU' AND (EFF_START <=:wsStartDate AND (EFF_STOP >=:wsCurrentDate OR EFF_STOP IS NULL)) ORDER BY CUSTOMER_SUPP , LOCATION , ITEMID , EFF_START", nativeQuery = true)
+    @Transactional
     Stream<IC1ParkanbDto> getC1ParkanbByWsStartDateAndWsCurrentDate(@Param("wsStartDate") String wsStartDate,
             @Param("wsCurrentDate") String wsCurrentDate);
 

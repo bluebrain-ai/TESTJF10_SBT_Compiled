@@ -5,11 +5,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import org.springframework.stereotype.Component;
 import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
@@ -36,7 +34,7 @@ public class ParkanbEntity implements Serializable {
     private String kanban;
     @Column(name = "ITEMID")
     private String itemid;
-    @Column(name = "LOT-QUANTITY")
+    @Column(name = "LOT_QUANTITY")
     private int lotQuantity;
     @Column(name = "EFF_START")
     private String effStart;

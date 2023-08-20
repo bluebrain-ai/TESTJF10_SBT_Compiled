@@ -12,7 +12,7 @@ public interface ICsiplntRepo extends JpaRepository<CsiplntEntity, String> {
 
     @QueryHints(value = { @QueryHint(name = org.hibernate.annotations.QueryHints.CACHEABLE, value = "true"),
             @QueryHint(name = org.hibernate.annotations.QueryHints.READ_ONLY, value = "true") })
-    @Query(value = "SELECT A.NAME as hvsmsuppplantname,B.CNT as hvsuppplantcnt FROM CSIPLNT A , (SELECT COUNT (DISTICT (NAME)) AS CNT FROM CSIPLNT WHERE PLANT_TYPE = 'PC 'AND CUSTOMER_SUPP =:hvPmCustomerSupp AS B WHERE PLANT_TYPE = 'PC 'AND CUSTOMER-SUPP =:hvPmCustomerSupp", nativeQuery = true)
+    @Query(value = "SELECT A.NAME as hvsmsuppplantname,B.CNT as hvsuppplantcnt FROM CSIPLNT A , (SELECT count(  distinct ( NAME)) AS CNT FROM CSIPLNT WHERE PLANT_TYPE = 'PC' AND CUSTOMER_SUPP =:hvPmCustomerSupp) AS B WHERE PLANT_TYPE = 'PC' AND CUSTOMER_SUPP =:hvPmCustomerSupp", nativeQuery = true)
     ICsiplntDto getCsiplntByHvPmCustomerSupp(@Param("hvPmCustomerSupp") String hvPmCustomerSupp);
 
 }

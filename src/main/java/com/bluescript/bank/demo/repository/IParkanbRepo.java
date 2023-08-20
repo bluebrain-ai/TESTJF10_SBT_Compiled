@@ -28,7 +28,7 @@ public interface IParkanbRepo extends JpaRepository<ParkanbEntity, String> {
                                                                                                              // performance
             @QueryHint(name = org.hibernate.annotations.QueryHints.CACHEABLE, value = "false"),
             @QueryHint(name = org.hibernate.annotations.QueryHints.READ_ONLY, value = "true") })
-    @Query(value = "SELECT SHARE as hvPkShare,LOCATION as hvPkLocation,STORE_ADDRESS_PRIM as hvPkStoreAddrPrim,PACKING_STYLE as hvPkPackingStyle FROM PARKANB WHERE TYPE = 'CL 'AND CSI_TYPE = 'SU 'AND ITEMID =:wsPartNumber AND CUSTOMER_SUPP =:wsCustomerSupp AND SUBSTR (LOCATION , 1 , 2) =:wsDock AND (EFF_START < =:wsStartDate AND (EFF_STOP > =:wsCurrentDate OR EFF_STOP IS NULL)) ORDER BY SHARE DESC , LOCATION DESC", nativeQuery = true)
+    @Query(value = "SELECT SHARE as hvPkShare,LOCATION as hvPkLocation,STORE_ADDRESS_PRIM as hvPkStoreAddrPrim,PACKING_STYLE as hvPkPackingStyle FROM PARKANB WHERE TYPE = 'CL' AND CSI_TYPE = 'SU' AND ITEMID =:wsPartNumber AND CUSTOMER_SUPP =:wsCustomerSupp AND SUBSTR(LOCATION , 1 , 2) =:wsDock AND (EFF_START <=:wsStartDate AND (EFF_STOP >=:wsCurrentDate OR EFF_STOP IS NULL)) ORDER BY SHARE DESC , LOCATION DESC", nativeQuery = true)
     Stream<IC2ParkanbDto> getC2ParkanbByWsPartNumberAndWsCustomerSuppAndWsDock(
             @Param("wsPartNumber") String wsPartNumber, @Param("wsCustomerSupp") String wsCustomerSupp,
             @Param("wsDock") String wsDock, @Param("wsStartDate") String wsStartDate,
